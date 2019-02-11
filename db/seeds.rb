@@ -15,8 +15,11 @@ end
 
 20.times do
     event = Event.create!(title: Faker::Book.title, description: Faker::HarryPotter.quote, price: rand(User.all.first.id..User.all.last.id), duration: 5, location: Faker::GameOfThrones.city, start_date: Faker::Date.forward(23))
-  end
+end
 
   10.times do 
     attendance = Attendance.create!(user_id: rand(User.all.first.id..User.all.last.id), event_id: rand(Event.all.first.id..Event.all.last.id))
   end 
+
+    
+  
