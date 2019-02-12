@@ -1,0 +1,34 @@
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="<%= %>"> EventBraite </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="<%= %>"> profile <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="<%= %>">New event</a>
+
+        </div>
+    </div>
+
+
+	<div>
+		<li><a class="btn btn-success p-3 pl-5 pr-5" href="<%= user_session_path%>" role="button">Login</a></li>
+
+	</div>
+	<div>
+		<li><a class="btn btn-light p-3 pl-5 pr-5" href="<%=new_user_registration_path%>" role="button">Sign in</a></li>
+	</div>
+
+	<div>
+		<li><%= link_to "Logout", destroy_user_session_path, :method => 'DELETE', class: "btn btn-primary p-3 pl-5 pr-5" %></li>
+	</div>
+
+
+</nav>	
+
+<% if flash[:success] %>
+  <div class= "alert alert-danger">
+    <%= flash[:success] %>
+      <% end %>
+  </div>
