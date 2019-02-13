@@ -5,7 +5,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="<%= %>"> profile <span class="sr-only">(current)</span></a>
+          <% if current_user %>
+            <a class="nav-item nav-link" href="<%= user_path(current_user.id) %>"> Profile <span class="sr-only">(current)</span></a>
+          <% end %>
             <a class="nav-item nav-link" href="<%= %>">New event</a>
 
         </div>
@@ -13,7 +15,7 @@
 
 
 	<div>
-		<li><a class="btn btn-success p-3 pl-5 pr-5" href="<%= user_session_path%>" role="button">Login</a></li>
+		<li><a class="btn btn-success p-3 pl-5 pr-5" href="<%= new_user_session_path%>" role="button">Login</a></li>
 
 	</div>
 	<div>
