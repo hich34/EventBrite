@@ -1,0 +1,13 @@
+<br><br>
+<div class="card text-center m-5">
+  <div class="card-header"><%= event_current.title %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special Event</h5>
+    <p class="card-text"><%= event_current.description %></p>
+  </div>
+  <div class="card-footer text-muted">The 
+    <%= event_current.start_date.strftime("%a %b #{event_current.start_date.day.ordinalize}") %>    By: <%= admin_event_email %> In: <%= event_current.location %> <%= event_current.price %>€
+  </div>
+</div>
+

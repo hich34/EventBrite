@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	before_action :authenticate_user!, only: [:show]
 
 	before_action :access_profile?, only: [:show]
 
