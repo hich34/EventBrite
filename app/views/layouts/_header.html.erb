@@ -8,7 +8,7 @@
           <% if current_user %>
             <a class="nav-item nav-link" href="<%= user_path(current_user.id) %>"> Profile <span class="sr-only">(current)</span></a>
           <% end %>
-            <a class="nav-item nav-link" href="<%= %>">New event</a>
+            <a class="nav-item nav-link" href="<%= new_event_path %>">New event</a>
 
         </div>
     </div>

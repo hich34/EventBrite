@@ -16,13 +16,13 @@ class Event < ApplicationRecord
     validates :location, presence: true
 
     def event_validation
-       if start_date < DateTime.now
+       if start_date.to_i < DateTime.now.to_i
         errors.add(:start_date, "la date est dépassée")
        end
     end
     
     def duration_x5_positif
-        if (duration % 5 != 0 || duration < 0)
+        if (duration.to_i % 5 != 0 || duration.to_i < 0)
         errors.add(:duration, "la durée doit être un multiple de 5 et positif ")
         end
     end
